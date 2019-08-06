@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>davidslab.com</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: black;
+            color: green;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .prompt {
+            display: flex;
+        }
+
+        .cursor {
+            margin-left: 0.5em;
+            width: 10px;
+            background-color: green;
+        }
+
+        .is-invisible {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="prompt">$ <span class="cursor"></span></div>
+
+    <script>
+        setInterval(() => {
+            document.querySelector('.cursor').classList.toggle('is-invisible');
+        }, 500);
+    </script>
+</body>
+
+</html>
